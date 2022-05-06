@@ -1,0 +1,40 @@
+$blue: #9dd3f2;
+$darkerblue: #42c0fb;
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main_component {
+    height: 100vh;
+}
+
+input{
+    margin-top: 20px;
+    width: 500px;
+    justify-content: center;
+}
+
+label{
+    font-size: 30px;
+    text-align: center;
+    padding: 30px;
+    text-shadow: 1px 1px $darkerblue;
+}
+
+h1{
+    font-size: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-weight: bold;
+    color: $darkerblue;
+    text-shadow: 3px 3px $blue;
+}
+
+#sign{
+    margin-right: 30px;
+}

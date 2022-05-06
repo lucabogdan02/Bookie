@@ -1,0 +1,23 @@
+<div class="main_component">
+    <div class="div-flex">
+        <h1>Register an account!</h1>
+        <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="email">Email: </label><br>
+                <input type="text" formControlName="email"  class="input is-medium is-rounded is-info" />
+            </div>
+            <div>
+                <label for="password">Password: </label><br>
+                <input type="password" formControlName="password" class="input is-medium is-rounded is-info"/>
+            </div>
+            <div>
+                <label for="rePassword">Confirm password: </label><br>
+                <input type="password" formControlName="rePassword"  class="input is-medium is-rounded is-info"/>
+            </div>
+            <div>
+                <button class="button is-rounded is-info is-outlined" type="submit" id="submit">Register</button>
+                <button class="button is-rounded is-danger is-outlined" (click)="goBack()">Back</button>
+            </div>
+        </form>
+    </div>
+</div>

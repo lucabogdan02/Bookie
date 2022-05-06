@@ -1,0 +1,15 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  </head>
+
+<div>
+    <h1>Sign in</h1>
+    <span><label for="email">Email: </label><br><input type="text" [formControl]="email" class="input is-medium is-rounded is-info" placeholder="noobmaster69@gmail.com" /></span>    
+    <span><label for="password">Password: </label><br><input type="password" [formControl]="password" class=" input is-medium is-rounded is-info" placeholder="********"/></span>
+    <span>
+        <button class="button is-rounded is-info is-outlined" id="sign" (click)="login()">Login</button>
+        <button class="button is-rounded is-danger is-outlined" [routerLink]="'/signup'">Sign Up</button>
+    </span>
+</div>
+
+

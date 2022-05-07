@@ -2,17 +2,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   </head>
 
-  <span class="loading-indicator" *ngIf="loading">
-    <mat-spinner></mat-spinner>
-</span>
-
 <div>
     <h1>Sign in</h1>
     <div class="fields">
     <mat-form-field>
         <mat-label class="email" for="email">Email: </mat-label><br>
         <input matInput type="text" [formControl]="email" class="input is-medium is-rounded is-info" placeholder="noobmaster69@gmail.com" />
-    </mat-form-field>    
+    </mat-form-field>
     <mat-form-field>
         <mat-label class="password" for="password">Password: </mat-label><br>
         <input matInput type="password" [formControl]="password" class=" input is-medium is-rounded is-info" placeholder="********"/>

@@ -27,12 +27,14 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     console.log(this.signUpForm.value);
-    this.authService.signup(this.signUpForm.get('email')?.value, this.signUpForm.get('password')?.value).then(cred => {
-      console.log(cred);
+    this.authService.signup(this.signUpForm.get('email')?.value, this.signUpForm.get('password')?.value).then(_ => {
       const user: User = {
-        id: cred.user?.uid as string,
+        uid: "",
         email: this.signUpForm.get('email')?.value
       };
+
+      console.table(user);
+
       this.userService.create(user).then(_ => {
         console.log('User added successfully.');
         this.router.navigateByUrl('/main');

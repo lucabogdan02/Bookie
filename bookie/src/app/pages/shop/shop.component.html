@@ -1,1 +1,11 @@
-<div>itt lennének a könyvek xd</div>
+<div *ngFor="let book of books">
+  <img src = "../assets/images/{{book.imageUrl}}" alt="nopic"/>
+  <h1>{{book.title}}</h1>
+  <p>{{book.author}}</p>
+  <p>{{book.price}}</p>
+  <div class="buttons">
+    <button mat-raised-button class="button is-rounded is-danger is-outlined" (click)="deleteBook(book.id)">
+      Törlés
+    </button>
+  </div>
+</div>

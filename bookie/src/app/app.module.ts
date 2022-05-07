@@ -19,8 +19,9 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import {AngularFireModule} from '@angular/fire/compat';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { DateFormatPipe } from './shared/pipes/date-format.pipe';
+import {MatDividerModule} from "@angular/material/divider";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 
 
@@ -31,7 +32,6 @@ import { DateFormatPipe } from './shared/pipes/date-format.pipe';
     ShopComponent,
     CartComponent,
     MenuComponent,
-    ProfileComponent,
     DateFormatPipe
   ],
   imports: [
@@ -46,7 +46,9 @@ import { DateFormatPipe } from './shared/pipes/date-format.pipe';
     //provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    MatDividerModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

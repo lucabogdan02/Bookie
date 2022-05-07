@@ -14,22 +14,24 @@ export class UserService {
   // CRUD (Create, Read, Update, Delete)
 
   create(user: User) {
-    return this.afs.collection<User>(this.collectionName).doc(user.id).set(user);
+    user.uid = this.afs.createId();
+    return this.afs.collection<User>(this.collectionName).doc(user.uid).set(user);
+
   }
 
   getAll() {
     return this.afs.collection<User>(this.collectionName).valueChanges();
   }
 
-  getById(id: string) {
-    return this.afs.collection<User>(this.collectionName).doc(id).valueChanges();
+  getById(uid: string) {
+    return this.afs.collection<User>(this.collectionName).doc(uid).valueChanges();
   }
 
   update(user: User) {
-    return this.afs.collection<User>(this.collectionName).doc(user.id).set(user);
+    return this.afs.collection<User>(this.collectionName).doc(user.uid).set(user);
   }
 
-  delete(id: string) {
-    return this.afs.collection<User>(this.collectionName).doc(id).delete();
+  delete(uid: string) {
+    return this.afs.collection<User>(this.collectionName).doc(uid).delete();
   }
 }

@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'main', component: MainComponent},
   {path: 'shop', component: ShopComponent, canActivate: [AuthGuard]},
   {path: 'cart', component: CartComponent, canActivate: [AuthGuard]},
-  {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+  {path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule), canActivate: [AuthGuard]},
   {path: 'signup', loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignupModule) },
   {path: 'login', loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) }
 ];

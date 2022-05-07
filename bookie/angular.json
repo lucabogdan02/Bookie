@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "bookie:build:production",
+            "firebaseProject": "bookie-d6d8a",
+            "firebaseHostingSite": "bookie-d6d8a"
+          }
         }
       }
     }

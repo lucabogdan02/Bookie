@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bookie-d6d8a": {
+      "hosting": {
+        "bookie": [
+          "bookie-d6d8a"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bookie-d6d8a"
+  }
+}

@@ -1,0 +1,20 @@
+$blue: #9dd3f2;
+$darkerblue: #42c0fb;
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+h1{
+    font-size: 80px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: $darkerblue;
+    text-shadow: 3px 3px $blue;
+}

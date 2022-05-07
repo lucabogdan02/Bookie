@@ -53,3 +53,34 @@ h1{
 #submit{
     margin-right: 30px;
 }
+
+.fields{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+mat-label{
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    padding: 40px;
+    text-shadow: 1px 1px $darkerblue;
+}
+
+mat-form-field{
+    width: 530px;
+}
+
+.email{
+    margin-left: 35%;
+}
+
+.password{
+    margin-left: 30%;
+}

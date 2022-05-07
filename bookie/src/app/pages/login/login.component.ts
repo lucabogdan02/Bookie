@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable, Subscription } from 'rxjs';
+import { FakeLoadingService } from '../../shared/services/fake-loading.service';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,16 +16,31 @@ export class LoginComponent implements OnInit {
   email = new FormControl('');
   password = new FormControl('');
 
-  constructor(private router: Router) { }
+  loadingSubscription?: Subscription;
+  loadingObservation?: Observable<boolean>;
+
+  loading: boolean = false;
+
+  constructor(private router: Router, private loadingService: FakeLoadingService, private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  login(){
-    if (this.email.value === 'test@test.com' && this.password.value === 'test') {
-      this.router.navigateByUrl('/main');
-    } else {
-      console.error('Incorrect email or password!');
-    }
+  async login() {
+    this.loading = true;
+   
+      this.authService.login(this.email.value, this.password.value).then(cred => {
+        console.log(cred);
+        this.router.navigateByUrl('/main');
+        this.loading = false;
+      }).catch(error => {
+        console.error(error);
+        this.loading = false;
+      });
   }
+
+  ngOnDestroy() {
+    this.loadingSubscription?.unsubscribe();
+  }
+
 }

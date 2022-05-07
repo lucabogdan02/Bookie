@@ -17,18 +17,35 @@ input{
     margin-top: 20px;
     width: 500px;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0;
 }
 
-label{
+mat-form-field{
+    width: 530px;
+}
+
+.fields{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+mat-label{
     font-size: 30px;
     text-align: center;
-    padding: 30px;
+    justify-content: center;
+    padding: 40px;
     text-shadow: 1px 1px $darkerblue;
 }
 
 h1{
     font-size: 80px;
-    margin-bottom: 100px;
+    margin-top: 80px;
+    margin-bottom: 30px;
     text-align: center;
     font-weight: bold;
     color: $darkerblue;
@@ -37,4 +54,21 @@ h1{
 
 #sign{
     margin-right: 30px;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+.email{
+    margin-left: 35%;
+}
+
+.password{
+    margin-left: 30%;
+}
+
+button{
+    margin-bottom: 150px;
+    justify-content: center;
 }

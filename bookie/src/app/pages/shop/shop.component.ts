@@ -14,6 +14,30 @@ const defaultBooks: Book[] =[{
   author: "Íróka",
   price: 6942,
   imageUrl: "book2.png"
+},  {
+  id: "",
+  title: "Ez is cím",
+  author: "Ezt is írta valaki",
+  price: 1111,
+  imageUrl: "book3.png"
+}, {
+  id: "",
+  title: "Szivárvány könyv",
+  author: "Dúró Dóra",
+  price: 666,
+  imageUrl: "book4.png"
+}, {
+  id: "",
+  title: "Prog 1 kettes",
+  author: "nem Alexin",
+  price: 3333,
+  imageUrl: "book5.png"
+}, {
+  id: "",
+  title: "Élet a diploma után",
+  author: "Még van pár éved nyugi",
+  price: 1234,
+  imageUrl: "book6.png"
 }]
 
 @Component({

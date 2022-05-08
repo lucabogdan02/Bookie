@@ -4,13 +4,12 @@ $darkerblue: #42c0fb;
 .profile{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
     height: 100%;
 }
 
 h1{
-    font-size: 80px;
+    font-size: 100px;
     margin-top: 80px;
     margin-bottom: 30px;
     text-align: center;
@@ -22,4 +21,12 @@ h1{
 button{
     width: 100px;
     margin-left: 46.5%;
+}
+
+p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px #9dd3f2;
 }
